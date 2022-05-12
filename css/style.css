@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Karla', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: hsl(204, 43%, 93%);
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 45vmax;
+    margin: 15vh auto;
+    display: grid;
+    grid-template-areas: 
+        "head head"
+        "satu dua"
+    ;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+header {
+    grid-area: head;
+    background-color: white;    
+    padding: 2em;
+}
+header h1 {
+    font-weight: 700;
+    color: hsl(179, 62%, 43%);
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+header .pertama {
+    font-weight: 700;
+    color: hsl(71, 73%, 54%);
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+header .kedua {
+    font-weight: 700;
+    font-size: 1em;
+    color: lightgray;
+}
+article.pertama {
+    grid-area: satu;
+    background-color: hsl(179, 62%, 43%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+}
+article.pertama h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+article.pertama .dolar {
+    display: flex;
+    align-items: center;
+}
+article.pertama .dolar h1 {
+    margin-right: .3em;
+    color: white;
+    font-weight: 700;
+    font-size: 2em;
+}
+article.pertama .dolar p {
+    color: lightgray;
+    font-weight: 400;
+    font-size: 1em;
+}
+article.pertama .ket {
+    color: hsl(204, 43%, 93%);
+    margin-bottom: 2em;
+}
+article.pertama button {
+    padding: .8em 2em;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(71, 73%, 54%);
+    border: 1px solid hsl(71, 73%, 54%);
+    color: white;
+    font-weight: 700;
+    transition: .5s;
+}
+article.pertama button:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 10px hsl(179, 61%, 29%);
+}
+article.kedua {
+    grid-area: dua;
+    background-color: hsl(179, 71%, 44%);
+    display: flex;
+    padding: 2em;
+}
+article.kedua div {
+    width: 80%;
+}
+article.kedua h2 {
+    color: white;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: .5em;
+}
+article.kedua p {
+    color: lightgray;
+    font-weight: 400;
+    font-size: 1em;
+}
+footer {
+    text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        grid-template-areas: 
+            "head"
+            "satu"
+            "dua"
+        ;
+        grid-template-columns: 1fr;
+        width: 35vmax;
+        margin: 8vh auto;
+    }
+    footer {
+        width: 80%;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 375px) {
+    .container {
+        width: 40vmax;
+    }
+}
